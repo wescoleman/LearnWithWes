@@ -4,9 +4,8 @@
   "description": "My website I'm making to showcase all my projects and hopefully inspire others",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "app.js"
-}
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wesley Coleman",
   "license": "ISC",
