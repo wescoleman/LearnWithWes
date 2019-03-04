@@ -4,7 +4,9 @@
   "description": "My website I'm making to showcase all my projects and hopefully inspire others",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+}
   },
   "author": "Wesley Coleman",
   "license": "ISC",
@@ -12,7 +14,8 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "nodemon": "^1.18.9",
+    "mongoose": "^5.4.16",
+    "nodemon": "^1.18.10",
     "tone": "^13.4.9"
   }
 }
