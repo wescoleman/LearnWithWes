@@ -23,8 +23,8 @@ window.onload = function(){
             return;
         }
         webgazer.util.bound(data);
-        var xprediction = data.x; //these x coordinates are relative to the viewport
-        var yprediction = data.y; //these y coordinates are relative to the viewport
+        // var xprediction = data.x; //these x coordinates are relative to the viewport
+        // var yprediction = data.y; //these y coordinates are relative to the viewport
         // console.log(elapsedTime); //elapsed time is based on time since begin was called
         // console.log("X: " + xprediction);
         // console.log("Y: " + yprediction);
