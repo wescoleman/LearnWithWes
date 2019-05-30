@@ -2,13 +2,14 @@ var express = require("express"),
     app = express(),
     path = require('path'),
     mongoose = require('mongoose'),
-    dbURL = "mongodb://localhost:27017/LWW",
+    dbURL = process.env.LWWDBURL,
     Sketches = require('./models/Sketches');
 
 
 // standard routes
-var homeRoute = require('./routes/standardViews/homeRoute'),
-	aboutMeRoute = require('./routes/standardViews/aboutMeRoute');
+var homeRoute = require('./routes/standardRoutes/homeRoute'),
+	aboutMeRoute = require('./routes/standardRoutes/aboutMeRoute'),
+	addCarouselImageRoute = require('./routes/standardRoutes/addCarouselImageRoute');
 
 // sketch routes
 var eyeTrackerRoute = require('./routes/sketches/eyeTrackerRoute'),
@@ -30,6 +31,7 @@ app.use(homeRoute);
 app.use(aboutMeRoute);
 app.use(eyeTrackerRoute);
 app.use(physonicsRoute);
+app.use(addCarouselImageRoute);
 
 
 

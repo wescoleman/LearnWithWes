@@ -1,7 +1,16 @@
 var mongoose = require('mongoose');
 
-sketchSchema = mongoose.Schema({
-    image: String
+sketchSchema = new mongoose.Schema({
+	name: String,
+    image: String,
+    address: String
 });
 
-module.exports = mongoose.model('sketch', sketchSchema);
+Sketch = mongoose.model('sketch', sketchSchema);
+// Sketch.create({
+// 	name: 'physonics',
+// 	image: 'https://i.imgur.com/kqliQf7.png',
+// 	address: '/physonics'
+// });
+
+module.exports = Sketch;

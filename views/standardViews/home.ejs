@@ -19,18 +19,13 @@
 	    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 	  </ol>
 	  <div class="carousel-inner">
-	    <div class="carousel-item active" id="customCarouselItem">
-	      <img class="d-block w-100" src="/images/WesSmile.jpg" alt="First slide">
-	    </div>
-	    <div class="carousel-item" id="customCarouselItem">
-	      <img class="d-block w-100" src="/images/WesBridge.jpg" alt="Second slide">
-	    </div>
-	    <div class="carousel-item" id="customCarouselItem">
-	      <img class="d-block w-100" src="/images/WesManchester.jpg" alt="Third slide">
-	    </div>
-	    <div class="carousel-item" id="customCarouselItem">
-	      <img class="d-block w-100" src="/images/WesBroadwayT.jpg" alt="Third slide">
-	    </div>
+	  	<%sketchImages.forEach(function(sketchImage){%>
+		    <div class="carousel-item active" id="customCarouselItem" >
+		    	<a href="<%=sketchImage.address;%>">
+		    		<img class="d-block w-100" src="<%=sketchImage.image;%>" alt="Sketch Image">
+		    	</a>
+		    </div>
+	 	 <% });%>
 	  </div>
 	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
