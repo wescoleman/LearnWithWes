@@ -19,13 +19,31 @@
 	    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 	  </ol>
 	  <div class="carousel-inner">
+	  	<%var count = 0%>
 	  	<%sketchImages.forEach(function(sketchImage){%>
-		    <div class="carousel-item active" id="customCarouselItem" >
-		    	<a href="<%=sketchImage.address;%>">
-		    		<img class="d-block w-100" src="<%=sketchImage.image;%>" alt="Sketch Image">
-		    	</a>
-		    </div>
-	 	 <% });%>
+	  		<%if(count == 0){%>
+			    <div class="carousel-item active" id="customCarouselItem" >
+			    	<a href="<%=sketchImage.address;%>">
+			    		<img class="d-block w-100" src="<%=sketchImage.image;%>" alt="Sketch Image">
+			    	</a>
+			    	<div class="carousel-caption">
+			            <h3></h3>
+			            <p></p>
+				    </div>
+			    </div>
+			<%} else {%>
+				<div class="carousel-item" id="customCarouselItem" >
+			    	<a href="<%=sketchImage.address;%>">
+			    		<img class="d-block w-100" src="<%=sketchImage.image;%>" alt="Sketch Image">
+			    	</a>
+					<div class="carousel-caption">
+			            <h3></h3>
+				        <p></p>
+				    </div>
+				</div>
+			<%}%>
+			<%count++;%>
+	 	<%});%>
 	  </div>
 	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>

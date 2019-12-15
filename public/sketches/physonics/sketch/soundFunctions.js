@@ -1,5 +1,3 @@
-
-
 function generateScale(f) {
 
     let a = pow(2, (1 / 12));

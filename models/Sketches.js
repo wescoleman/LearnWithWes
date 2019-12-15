@@ -8,9 +8,9 @@ sketchSchema = new mongoose.Schema({
 
 Sketch = mongoose.model('sketch', sketchSchema);
 // Sketch.create({
-// 	name: 'physonics',
-// 	image: 'https://i.imgur.com/kqliQf7.png',
-// 	address: '/physonics'
+// 	name: 'orbitalFollowers',
+// 	image: 'https://i.imgur.com/wHkiHaT.png',
+// 	address: '/orbitalFollowers'
 // });
 
 module.exports = Sketch;

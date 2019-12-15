@@ -3,6 +3,7 @@ var express = require("express"),
     path = require('path'),
     mongoose = require('mongoose'),
     dbURL = process.env.LWWDBURL,
+    // dbURL = "mongodb://localhost:27017/LWW",
     Sketches = require('./models/Sketches');
 
 
@@ -13,7 +14,8 @@ var homeRoute = require('./routes/standardRoutes/homeRoute'),
 
 // sketch routes
 var eyeTrackerRoute = require('./routes/sketches/eyeTrackerRoute'),
-    physonicsRoute = require('./routes/sketches/physonicsRoute');
+    physonicsRoute = require('./routes/sketches/physonicsRoute'),
+    orbitalFollowersRoute = require('./routes/sketches/orbitalFollowersRoute');
 
 
 
@@ -31,11 +33,12 @@ app.use(homeRoute);
 app.use(aboutMeRoute);
 app.use(eyeTrackerRoute);
 app.use(physonicsRoute);
+app.use(orbitalFollowersRoute);
 app.use(addCarouselImageRoute);
 
 
 
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log("server is running on localhost:3000");
+app.listen(process.env.PORT || 1234, function() {
+    console.log("server is running on localhost:1234");
 });

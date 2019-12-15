@@ -9,8 +9,6 @@ router.get("/", function(req, res) {
 		if (err) {
 			res.render('standardViews/home');
 		} else {
-			for (var i = 0; i < allSketchImages.length; i++) {
-			}
 			res.render('standardViews/home', {sketchImages: allSketchImages})
 		}
 	})
